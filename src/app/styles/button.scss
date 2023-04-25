@@ -1,0 +1,38 @@
+button,
+.button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  max-width: 100%;
+
+  border-style: solid;
+  border-color: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  text-align: center;
+
+  cursor: pointer;
+  color: var(--theme-foreground);
+
+  background-color: transparent;
+
+  &:disabled {
+    cursor: default;
+    &:hover,
+    &:active {
+      transition: none;
+      cursor: default;
+    }
+  }
+}
