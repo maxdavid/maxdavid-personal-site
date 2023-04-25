@@ -1,0 +1,53 @@
+.link,
+.externalLink {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+
+    .arrow {
+      &Head {
+        transform: translateX(6px);
+      }
+      &Line {
+        transform: scaleX(1.4);
+      }
+    }
+  }
+}
+
+.externalLink {
+  margin-right: 8px;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateX(100%) rotate(-45deg);
+  color: var(--theme-accent);
+
+  &,
+  &Head,
+  &Line {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-property: all;
+    transition-duration: 150ms;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    .arrow {
+      transform: translateX(150%) rotate(-45deg) scale(2);
+    }
+    .link,
+    .externalLink {
+      font-size: 2.5rem;
+    }
+  }
+}
