@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import { redaction20, recursive } from '@/app/fonts';
+import { Portrait } from '@/app/components/portrait';
 import styles from './hero.module.scss';
 
 export const Hero = () => {
   return (
     <section className={styles.hero}>
-      <div className={styles.portrait}></div>
+      <Portrait />
       <div className={classNames(styles.intro, recursive.className)}>
         <div className={classNames(styles.greeting, redaction20.className)}>
           Hello,

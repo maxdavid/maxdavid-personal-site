@@ -1,0 +1,13 @@
+.contact {
+  padding: 32px;
+  background-color: var(--theme-foreground);
+  color: var(--theme-background);
+}
+
+.email {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-variation-settings: 'CASL' 1, 'slnt' -15, 'wght' 1000;
+}
