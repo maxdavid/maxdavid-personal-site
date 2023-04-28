@@ -1,5 +1,9 @@
 .main {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   border: 1px solid var(--theme-foreground);
   background-color: var(--theme-background);
+
+  border-radius: 48px 0 48px 0;
+  overflow: hidden;
 }

@@ -1,8 +1,9 @@
 'use client';
 
 import classNames from 'classnames';
+import { useEffect, useState } from 'react';
 import { Link } from '@/app/components';
-import { useState } from 'react';
+import { recursive } from '@/app/fonts';
 import styles from './header.module.scss';
 
 const MobileMenuOpen = (
@@ -89,8 +90,36 @@ const MobileMenuClose = (
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.height = '100vh';
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.height = 'unset';
+    }
+  }, [isOpen]);
+
   return (
     <>
+      <div
+        className={classNames(styles.backdrop, recursive.className)}
+        hidden={!isOpen}
+        onClick={() => setIsOpen(false)}
+      >
+        <div className={styles.backdropInner}>
+          <div className={styles.backdropName} onClick={() => setIsOpen(false)}>
+            Max David
+          </div>
+          <div className={styles.backdropEmail}>
+            <Link href='mailto:me@maxdavid.com'>me@maxdavid.com</Link>
+          </div>
+          <MobileMenuClose
+            onClick={() => setIsOpen(false)}
+            disabled={!isOpen}
+          />
+        </div>
+      </div>
       <nav className={classNames(styles.nav, isOpen && styles.mobileOpen)}>
         <div className={styles.navInner}>
           <ul>
@@ -103,10 +132,6 @@ export const Nav = () => {
               <Link href='/resume'>resume</Link>
             </li>
           </ul>
-          <MobileMenuClose
-            onClick={() => setIsOpen(false)}
-            disabled={!isOpen}
-          />
         </div>
       </nav>
       <MobileMenuOpen onClick={() => setIsOpen(true)} disabled={isOpen} />

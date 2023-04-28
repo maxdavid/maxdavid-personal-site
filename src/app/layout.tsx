@@ -1,12 +1,13 @@
 import { inter } from '@/app/fonts';
 import { Header } from './components/header/header';
 import './styles/reset.css';
-import './styles/globals.css';
+import './styles/globals.scss';
 import './styles/button.scss';
 
 export const metadata = {
   title: 'Max David',
   description: 'Full-stack developer with a focus on frontend design',
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
@@ -17,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='page-container'>
-          <Header />
-          {children}
-        </div>
+        <Header />
+        <div className='page-container'>{children}</div>
       </body>
     </html>
   );

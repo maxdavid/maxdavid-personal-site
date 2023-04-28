@@ -1,0 +1,10 @@
+$theme-foreground: rgb(0, 2, 255);
+$theme-background: rgb(255, 255, 255);
+$theme-accent: rgb(255, 31, 0);
+$theme-selection-color: rgb(255, 31, 0, 0.5);
+
+@supports (color: color(display-p3 1 1 1)) {
+  $theme-foreground: color(display-p3 0 0.05 1);
+  $theme-background: color(display-p3 1 1 1);
+  $theme-accent: color(display-p3 1 0.25 0.15);
+}
