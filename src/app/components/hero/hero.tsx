@@ -13,7 +13,7 @@ export const Hero = () => {
         </div>
         <div>
           I&apos;m a full-stack web developer with a focus on front-end &
-          product design. I enjoy perfecting interaction details and creating
+          product design. I enjoy perfecting interaction details while creating
           consistent systems throughout my work.
         </div>
         <div className={classNames(styles.location, redaction20.className)}>

@@ -2,12 +2,41 @@
   padding: 32px;
   background-color: var(--theme-foreground);
   color: var(--theme-background);
+  display: grid;
+  line-height: 1;
+  gap: 16px;
+
+  @media (max-width: 900px) {
+    padding: 32px 16px;
+  }
+}
+
+.title {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.cta {
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.35;
+  font-variation-settings: 'MONO' 0, 'CASL' 0.5, 'wght' 700;
 }
 
 .email {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 500;
-  margin: 0;
-  padding: 0;
   font-variation-settings: 'CASL' 1, 'slnt' -15, 'wght' 1000;
+  line-height: 2;
+
+  &Title {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    font-weight: 500;
+    line-height: 1.35;
+    font-variation-settings: 'MONO' 0, 'CASL' 0.5, 'wght' 700;
+  }
+}
+
+.divider {
+  border: 1px dotted currentColor;
+  margin: 32px 0;
 }
