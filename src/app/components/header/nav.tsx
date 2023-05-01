@@ -129,7 +129,7 @@ export const Nav = () => {
               </Link>
             </li>
             <li className={classNames(styles.link)}>
-              <Link href='/resume'>resume</Link>
+              <Link href='/MaxDavid_resume.pdf'>resume</Link>
             </li>
           </ul>
         </div>
