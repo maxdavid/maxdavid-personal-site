@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { inter } from '@/app/fonts';
 import { Header } from './components/header/header';
 import './styles/reset.css';
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Header />
         <div className='page-container'>{children}</div>
       </body>
+      <Analytics />
     </html>
   );
 }
