@@ -8,10 +8,19 @@ export interface LinkProps
   target?: string;
 }
 
-export const Link = ({ href, children, target, ...rest }: LinkProps) => {
+export const Link = ({
+  href,
+  children,
+  target,
+  className,
+  ...rest
+}: LinkProps) => {
   return (
     <a
-      className={target ? styles.externalLink : styles.link}
+      className={classNames(
+        target ? styles.externalLink : styles.link,
+        className
+      )}
       href={href}
       target={target}
       {...rest}
