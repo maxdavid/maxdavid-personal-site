@@ -6,9 +6,7 @@ import styles from './footer.module.scss';
 export const Footer = () => {
   return (
     <footer className={classNames(styles.footer, redaction35.className)}>
-      <Link className={styles.link} href='http://butt.pics'>
-        miss the old site?
-      </Link>
+      <Link href='http://butt.pics'>miss the old site?</Link>
     </footer>
   );
 };
