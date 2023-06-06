@@ -10,8 +10,8 @@ export const Contact = () => {
         Contact
       </div>
       <div className={classNames(styles.cta, recursive.className)}>
-        Currently looking for a role somewhere with a novel use case for AI or
-        another emerging technology.
+        Currently looking for a role that creatively blends design &
+        development.
       </div>
       <hr className={styles.divider} />
       <div className={classNames(styles.emailTitle, recursive.className)}>
