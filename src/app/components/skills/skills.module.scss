@@ -17,8 +17,8 @@
     line-height: 1;
   }
 
-  &:after,
-  &:before {
+  // &:before,
+  &:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -30,10 +30,10 @@
     background-repeat: space no-repeat;
   }
 
-  &:before {
+  /* &:before {
     top: 0;
     bottom: auto;
-  }
+  } */
 }
 
 .grid {

@@ -6,7 +6,7 @@ export const Skills = () => {
   return (
     <section className={styles.skills}>
       <div className={classNames(styles.header, redaction35.className)}>
-        <h2>What&apos;s Cooking Big Dog</h2>
+        {/* <h2>What&apos;s Cooking Big Dog</h2> */}
       </div>
       <div className={styles.grid}>
         {/*
