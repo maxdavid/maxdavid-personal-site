@@ -10,14 +10,12 @@ export const Contact = () => {
         Current Role
       </div>
       <div className={classNames(styles.cta, recursive.className)}>
-        UX Engineer @ Google, supporting research & design tools.
+        UX Engineer @ Google, supporting tools for research.
       </div>
       <hr className={styles.divider} />
-      {/*
       <div className={classNames(styles.emailTitle, recursive.className)}>
-        Sound like you? Let&apos;s talk:
+        don&apos;t be weird:
       </div>
-      */}
       <div className={classNames(styles.email, recursive.className)}>
         <Link href='mailto:me@maxdavid.com'>me@maxdavid.com</Link>
       </div>
