@@ -1,4 +1,4 @@
-import { Hero, Contact, Footer } from '@/app/components';
+import { Hero, Contact, Footer, Skills } from '@/app/components';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <Hero />
+        <Skills />
         <Contact />
       </main>
       <Footer />
