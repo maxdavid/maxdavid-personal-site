@@ -7,8 +7,29 @@ import './styles/button.scss';
 
 export const metadata = {
   title: 'Max David',
-  description: 'Full-stack developer with a focus on frontend design',
+  description: 'UX Engineer & Developer',
   themeColor: '#ffffff',
+  openGraph: {
+    title: 'Max David',
+    description: 'UX Engineer & Developer',
+    siteName: 'Max David',
+    images: [
+      {
+        url: 'https://maxdavid.com/og.jpg',
+        width: 1200,
+        height: 1500,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Max David',
+    description: 'UX Engineer & Developer',
+    siteId: '15980212',
+    creator: '@pipecork',
+    creatorId: '15980212',
+    images: ['https://maxdavid.com/twitter.jpg'],
+  },
 };
 
 export default function RootLayout({
